@@ -783,6 +783,37 @@
       .footer-inner { grid-template-columns: 1fr; gap: 40px; }
       .float-card { left: auto; right: 16px; bottom: 20px; }
     }
+	/* ── AJUSTES PARA RESPONSIVIDAD (CELULARES) ── */
+
+@media (max-width: 992px) {
+  /* En tablets, mostramos 2 columnas en servicios */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Ajustamos el padding para que no se vea apretado */
+  .services-section { padding: 60px 20px; }
+  .modality-section { 
+    grid-template-columns: 1fr; 
+    padding: 60px 20px; 
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* En celulares, todo a 1 sola columna */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajustes generales de padding para celulares */
+  .services-section { padding: 40px 20px; }
+  .modality-section { padding: 40px 20px; }
+  
+  /* Opcional: reducir un poco el tamaño de fuente en móviles */
+  .services-header { margin-bottom: 30px; }
+  .service-card { padding: 25px 20px; }
+}
   </style>
 </head>
 <body>
@@ -1029,7 +1060,7 @@
   <div class="footer-bottom">
     <span>© 2026 Psicóloga Mary Quiroz · C.Ps.P. [68872] · Todos los derechos reservados.</span>
     <span>
-      Hecho con 🤍 por 
+      Hecho con 🤍 por
       <a href="https://github.com/Shisho1012" target="_blank" class="footer-copy-link" style="color:rgba(255,255,255,.55);text-decoration:none;">@shisho1012</a> 
       | 
       <a href="mailto:jorge10diciembre@gmail.com" style="color:rgba(255,255,255,.55);text-decoration:none;">jorge10diciembre@gmail.com</a>
