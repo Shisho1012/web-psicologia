@@ -3,45 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consultoría Psicológica | Dra. [Nombre de tu Tía]</title>
+    <title>Consultoría Psicológica | Lic. [Nombre de tu Tía]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Un diseño simple, moderno y relajante (colores azulosos/neutrales) */
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; background-color: #f4f7f6; }
-        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; }
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1, h2 { color: #2c3e50; }
-        .cta-button { display: inline-block; background: #27ae60; color: white; padding: 0.8rem 1.5rem; text-align: center; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
-        .cta-button:hover { background: #219653; }
-        footer { text-align: center; padding: 2rem; color: #7f8c8d; font-size: 0.9rem; }
+        /* Variables de color para un diseño elegante y terapéutico */
+        :root {
+            --primary-color: #2c4a5e;    /* Azul pizarra elegante */
+            --secondary-color: #4a7c59;  /* Verde naturaleza/calma */
+            --accent-color: #25d366;     /* Verde WhatsApp */
+            --bg-light: #faf9f6;         /* Blanco cálido/familiar */
+            --text-dark: #2b2b2b;
+            --text-muted: #626262;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Encabezado Moderno */
+        header {
+            background: linear-gradient(135deg, #2c4a5e 0%, #1a303f 100%);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid #4a7c59;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .colegiatura {
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-weight: 300;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 1.5rem auto 0 auto;
+            font-weight: 300;
+        }
+
+        /* Contenedor Principal Estilo Tarjeta Elegante */
+        .container {
+            max-width: 750px;
+            margin: -2rem auto 3rem auto; /* Hace que flote un poco sobre el header */
+            padding: 2.5rem;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            font-size: 1.6rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+            margin-top: 2rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            color: var(--text-dark);
+            font-size: 1.05rem;
+        }
+
+        /* Lista de Servicios Estilizada */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 0.8rem;
+            font-size: 1.05rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        ul li::before {
+            content: "✦";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        /* Botón de WhatsApp Moderno con Efecto de Elevación */
+        .cta-container {
+            text-align: center;
+            margin: 2.5rem 0 1rem 0;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--accent-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.15rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            background-color: #20ba5a;
+        }
+
+        /* Pie de Página y Redes Sociales */
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background-color: #f0f2f1;
+            color: var(--text-muted);
+        }
+
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background: white;
+            color: var(--primary-color);
+            border-radius: 50%;
+            margin: 0 0.5rem;
+            text-decoration: none;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Colores específicos de hover para redes */
+        .social-icon.fb:hover { background-color: #1877f2; }
+        .social-icon.ig:hover { background-color: #e1306c; }
+        .social-icon.tk:hover { background-color: #000000; }
+
+        footer p {
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Consultoría Psicológica</h1>
-        <p>Atención profesional y confidencial para tu bienestar emocional.</p>
+        <h1>Lic. [Nombre de tu Tía]</h1>
+        <div class="colegiatura">Psicóloga Colegiada C.Ps.P. [Número]</div>
+        <p>Un espacio seguro y confidencial en Lima para reencontrar tu bienestar emocional y equilibrio mental.</p>
     </header>
 
     <div class="container">
         <h2>Sobre mí</h2>
-        <p>Hola, soy la Psicóloga [Nombre de tu Tía], especialista en [Especialidad, ej: terapia familiar, ansiedad]. Llego desde Cajamarca para ofrecerte un espacio seguro donde trabajar juntos en tu salud mental.</p>
+        <p>Hola, soy la Psicóloga [Nombre de tu Tía]. Llegué desde la hermosa ciudad de Cajamarca con el firme propósito de guiar y acompañar a las personas en su proceso de sanación y crecimiento personal. Ofrezco un enfoque cálido, empático y libre de juicios, adaptado a tus necesidades individuales.</p>
+        <p>Atiendo de manera <strong>presencial en Lima</strong> y también cuento con la modalidad de <strong>sesiones virtuales</strong> para que puedas llevar tu terapia desde la comodidad de tu hogar.</p>
         
-        <h2>Servicios</h2>
+        <h2>¿Cómo te puedo ayudar?</h2>
         <ul>
-            <li>Terapia Psicológica para Adultos</li>
-            <li>Manejo de Ansiedad y Estrés</li>
-            <li>Consejería y Orientación Familiar</li>
+            <li>Terapia Psicológica para Adultos y Jóvenes</li>
+            <li>Manejo y control de la Ansiedad y el Estrés Cotidiano</li>
+            <li>Acompañamiento en Procesos de Duelo y Rupturas</li>
+            <li>Fortalecimiento de la Autoestima y Crecimiento Personal</li>
+            <li>Consejería y Orientación Familiar o de Pareja</li>
         </ul>
 
-        <h2>¿Cómo agendar una cita?</h2>
-        <p>Atiendo de manera presencial en Lima y también de forma virtual. Haz clic abajo para enviarme un mensaje directo por WhatsApp y coordinar tu horario.</p>
+        <h2>Modalidad y Citas</h2>
+        <p>Cada sesión es un espacio diseñado exclusivamente para ti. No necesitas pasar por procesos complejos: coordinamos directamente el día y la hora que mejor se acomode a tu horario.</p>
         
-        <!-- Enlace directo a su WhatsApp -->
-        <a href="https://wa.me/51999999999?text=Hola,%20deseo%20información%20sobre%20las%20consultas" class="cta-button" target="_blank">👉 Agendar Cita por WhatsApp</a>
+        <div class="cta-container">
+            <a href="https://wa.me/51999999999?text=Hola%20Dra.%20deseo%20separar%20una%20consulta" class="cta-button" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Agendar Cita por WhatsApp
+            </a>
+        </div>
     </div>
 
     <footer>
+        <div class="social-links">
+            <a href="#" class="social-icon fb" target="_blank" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-icon ig" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-icon tk" target="_blank" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
         <p>&copy; 2026 Consultoría Psicológica - Todos los derechos reservados.</p>
+        <p>Lima, Perú</p>
     </footer>
 
 </body>
