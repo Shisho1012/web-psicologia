@@ -532,6 +532,138 @@
 
     .footer-brand span { font-style: italic; color: var(--accent); }
 
+    /* ── NAVBAR ── */
+    .navbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      padding: 0 80px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background .4s ease, box-shadow .4s ease, backdrop-filter .4s ease;
+    }
+
+    .navbar.scrolled {
+      background: rgba(246, 242, 236, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(83, 117, 98, 0.12), 0 4px 24px rgba(44, 54, 48, 0.06);
+    }
+
+    .nav-brand {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      text-decoration: none;
+    }
+
+    .nav-brand-top {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--primary);
+      opacity: 0;
+      transform: translateY(4px);
+      transition: opacity .3s, transform .3s;
+    }
+
+    .navbar.scrolled .nav-brand-top {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .nav-brand-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--text-main);
+      letter-spacing: -.01em;
+      transition: color .3s;
+    }
+
+    .nav-brand-main em {
+      font-style: italic;
+      color: var(--primary);
+      font-weight: 300;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: .04em;
+      color: var(--text-mut);
+      text-decoration: none;
+      transition: color .25s;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0; right: 0;
+      height: 1px;
+      background: var(--primary);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .3s ease;
+    }
+
+    .nav-link:hover { color: var(--primary); }
+    .nav-link:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 22px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: background .25s, transform .2s, box-shadow .25s;
+      box-shadow: 0 4px 14px rgba(83, 117, 98, 0.22);
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-hv);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(83, 117, 98, 0.30);
+    }
+
+    .nav-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #25D366;
+      animation: pulse-dot 2s infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulse-dot {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45); }
+      50%       { box-shadow: 0 0 0 5px rgba(37, 211, 102, 0); }
+    }
+
+    /* push hero down so content isn't under navbar */
+    .hero { padding-top: 148px; }
+
+    @media (max-width: 900px) {
+      .navbar { padding: 0 24px; }
+      .nav-link { display: none; }
+      .hero { padding-top: 132px; }
+    }
+
     /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
@@ -554,6 +686,20 @@
   </style>
 </head>
 <body>
+
+<nav class="navbar" id="navbar">
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-top">hablandoconmary.online</span>
+    <span class="nav-brand-main">hablando con <em>mary</em></span>
+  </a>
+  <div class="nav-right">
+    <a href="#servicios" class="nav-link">Especialidades</a>
+    <a href="https://wa.me/51939380981?text=Hola%20Psic%C3%B3loga%20Mary,%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20consulta." class="nav-cta" target="_blank">
+      <span class="nav-dot"></span>
+      Agendar cita
+    </a>
+  </div>
+</nav>
 
 <section class="hero">
   <div class="hero-left">
@@ -725,5 +871,11 @@
     </svg>
 </a>
 
+<script>
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+  });
+</script>
 </body>
 </html>
