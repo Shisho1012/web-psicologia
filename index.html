@@ -28,6 +28,8 @@
       font-family: 'DM Sans', sans-serif;
       background: var(--cream);
       color: var(--ink);
+      font-size: 16px; /* Subimos el estándar de lectura */
+      line-height: 1.7;
       overflow-x: hidden;
     }
 
@@ -121,12 +123,12 @@
     }
 
     .hero-desc {
-      font-size: 14.5px;
-      line-height: 1.7;
+      font-size: 15.5px; /* Más grande y legible al inicio */
+      line-height: 1.75;
       color: var(--ink-soft);
       max-width: 420px;
       margin-top: 20px;
-      font-weight: 300;
+      font-weight: 400; /* Le damos un poquito más de cuerpo a la letra */
       animation: fadeUp .8s .3s ease both;
     }
 
@@ -363,10 +365,10 @@
     }
 
     .about-text {
-      font-size: 15px;
-      line-height: 1.75;
+      font-size: 16px; /* Letra grande y cómoda para la historia de Mary */
+      line-height: 1.8;
       color: var(--ink-soft);
-      font-weight: 300;
+      font-weight: 400;
       margin-top: 24px;
     }
 
@@ -455,12 +457,12 @@
       background: var(--white);
       border-radius: 16px;
       padding: 30px 24px;
-      border: 1px solid rgba(52,62,56,.04);
+      border: 1px solid rgba(83, 117, 98, 0.15); /* Borde sutil verde para dar nitidez */
       transition: transform .3s, box-shadow .3s;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 4px 15px rgba(52,62,56,.03); /* Sombra suave para que resalte del fondo */
     }
-
     .service-card::after {
       content: '';
       position: absolute;
@@ -499,11 +501,11 @@
       margin-bottom: 10px;
     }
 
-    .service-desc {
-      font-size: 13.5px;
+   .service-desc {
+      font-size: 14.5px;
       line-height: 1.65;
       color: var(--ink-soft);
-      font-weight: 300;
+      font-weight: 400;
     }
 
     /* ── MODALIDAD ─────────────────────────────────────────── */
@@ -517,15 +519,16 @@
 
     .modality-cards { display: flex; flex-direction: column; gap: 16px; }
 
-    .mod-card {
+ .mod-card {
       background: var(--white);
       border-radius: 16px;
       padding: 24px 28px;
       display: flex;
       gap: 16px;
       align-items: flex-start;
-      border: 1px solid rgba(52,62,56,.04);
+      border: 1px solid rgba(83, 117, 98, 0.15); /* Borde sutil */
       transition: box-shadow .25s;
+      box-shadow: 0 4px 15px rgba(52,62,56,.03);
     }
 
     .mod-card:hover { box-shadow: 0 10px 30px rgba(52,62,56,.04); }
