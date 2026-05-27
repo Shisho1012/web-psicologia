@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lic. [Nombre de tu Tía] — Psicóloga Clínica</title>
+  <title>Psicóloga Mary Quiroz — Terapia Online</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
+    /* PALETA ANTI-FATIGA VISUAL (Cero blancos puros) */
     :root {
-      --cream:    #F7F3EE;
-      --warm:     #EDE6DA;
-      --sage:     #7A9E87;
-      --sage-dk:  #4F7360;
-      --gold:     #C9A96E;
-      --ink:      #2B2B2B;
-      --ink-soft: #5A5550;
-      --white:    #FFFFFF;
+      --cream:    #F2EBE3; /* Fondo principal: Avena muy suave, no quema la vista */
+      --warm:     #E8DFD3; /* Fondo secundario: Tono arena cálido */
+      --white:    #FBF9F6; /* Reemplazo del blanco puro: Color Crema/Perla mate */
+      --sage:     #8DA897; /* Verde menta apagado */
+      --sage-dk:  #537562; /* Verde hoja natural para botones */
+      --gold:     #B59B65; /* Dorado tenue para detalles */
+      --ink:      #343E38; /* Gris verdoso muy oscuro (no es negro), suave al leer */
+      --ink-soft: #5E6961; /* Texto secundario gris verdoso */
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -30,14 +31,14 @@
       overflow-x: hidden;
     }
 
-    /* ── HERO (AHORA MÁS COMPACTO) ────────────────────────── */
+    /* ── HERO ────────────────────────── */
     .hero {
-      padding: 60px 0; /* Reemplaza el min-height gigante */
+      padding: 60px 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       position: relative;
       overflow: hidden;
-      align-items: center; /* Centra todo verticalmente */
+      align-items: center;
     }
 
     .hero::before {
@@ -45,17 +46,17 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(122,158,135,.18) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 60% at 80% 20%, rgba(201,169,110,.10) 0%, transparent 60%);
+        radial-gradient(ellipse 60% 80% at 20% 50%, rgba(141,168,151,.15) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 20%, rgba(181,155,101,.08) 0%, transparent 60%);
       pointer-events: none;
     }
 
     .hero::after {
       content: '';
       position: absolute;
-      width: 480px; height: 480px; /* Círculo un poco más pequeño */
+      width: 480px; height: 480px;
       border-radius: 50%;
-      border: 1px solid rgba(122,158,135,.20);
+      border: 1px solid rgba(141,168,151,.20);
       top: -120px; right: -120px;
       pointer-events: none;
     }
@@ -64,7 +65,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      padding: 40px 40px 40px 80px; /* Reducimos el relleno */
+      padding: 40px 40px 40px 80px;
       position: relative;
       z-index: 1;
     }
@@ -73,8 +74,8 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(122,158,135,.12);
-      border: 1px solid rgba(122,158,135,.30);
+      background: rgba(141,168,151,.15);
+      border: 1px solid rgba(141,168,151,.30);
       border-radius: 100px;
       padding: 6px 16px;
       font-size: 11px;
@@ -96,7 +97,7 @@
 
     .hero-name {
       font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(36px, 4.5vw, 56px); /* Letra más reducida y elegante */
+      font-size: clamp(36px, 4.5vw, 56px);
       font-weight: 300;
       line-height: 1.05;
       letter-spacing: -.01em;
@@ -120,10 +121,10 @@
     }
 
     .hero-desc {
-      font-size: 14px;
-      line-height: 1.65;
+      font-size: 14.5px;
+      line-height: 1.7;
       color: var(--ink-soft);
-      max-width: 400px;
+      max-width: 420px;
       margin-top: 20px;
       font-weight: 300;
       animation: fadeUp .8s .3s ease both;
@@ -142,7 +143,7 @@
       align-items: center;
       gap: 10px;
       background: var(--sage-dk);
-      color: var(--white);
+      color: #FBF9F6;
       text-decoration: none;
       padding: 14px 28px;
       border-radius: 100px;
@@ -150,13 +151,13 @@
       font-weight: 500;
       letter-spacing: .02em;
       transition: background .25s, transform .2s, box-shadow .25s;
-      box-shadow: 0 8px 32px rgba(79,115,96,.25);
+      box-shadow: 0 8px 32px rgba(83,117,98,.20);
     }
 
     .btn-primary:hover {
       background: var(--sage);
       transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(79,115,96,.35);
+      box-shadow: 0 12px 40px rgba(83,117,98,.30);
     }
 
     .btn-secondary {
@@ -170,13 +171,13 @@
       border-radius: 100px;
       font-size: 14px;
       font-weight: 400;
-      border: 1px solid rgba(43,43,43,.20);
+      border: 1px solid rgba(52,62,56,.20);
       transition: border-color .25s, background .25s;
     }
 
     .btn-secondary:hover {
       border-color: var(--sage);
-      background: rgba(122,158,135,.06);
+      background: rgba(141,168,151,.08);
     }
 
     .hero-right {
@@ -187,11 +188,10 @@
       padding: 40px 0;
     }
 
-    /* photo frame ajustado y más pequeño */
     .photo-frame {
       position: relative;
-      width: 320px;  /* Reducido de 380px */
-      height: 400px; /* Reducido de 480px */
+      width: 320px;
+      height: 400px;
       animation: fadeUp .8s .2s ease both;
     }
 
@@ -200,7 +200,7 @@
       position: absolute;
       inset: -14px -14px 14px 14px;
       border-radius: 200px 200px 200px 200px;
-      background: rgba(122,158,135,.12);
+      background: rgba(141,168,151,.12);
       z-index: 0;
     }
 
@@ -208,7 +208,7 @@
       width: 100%;
       height: 100%;
       border-radius: 180px 180px 160px 160px;
-      background: linear-gradient(160deg, var(--warm) 0%, rgba(122,158,135,.15) 100%);
+      background: linear-gradient(160deg, var(--warm) 0%, rgba(141,168,151,.20) 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -216,22 +216,21 @@
       gap: 12px;
       position: relative;
       z-index: 1;
-      border: 1px solid rgba(122,158,135,.20);
+      border: 1px solid rgba(141,168,151,.30);
       overflow: hidden;
     }
 
-    .photo-placeholder svg {
-      opacity: .3;
+    /* ESTO ES IMPORTANTE: Asegura que si pones la foto de tu tía, cubra todo bien */
+    .photo-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none; /* Borra o comenta esta línea cuando subas su foto real */
     }
 
-    .photo-placeholder span {
-      font-size: 11px;
-      color: var(--ink-soft);
-      opacity: .5;
-      font-style: italic;
-    }
+    .photo-placeholder svg { opacity: .3; }
+    .photo-placeholder span { font-size: 11px; color: var(--ink-soft); opacity: .6; font-style: italic; }
 
-    /* tarjetas flotantes reubicadas para el nuevo tamaño */
     .float-card {
       position: absolute;
       bottom: 20px;
@@ -239,7 +238,8 @@
       background: var(--white);
       border-radius: 16px;
       padding: 16px 20px;
-      box-shadow: 0 15px 40px rgba(0,0,0,.08);
+      box-shadow: 0 15px 40px rgba(52,62,56,.06);
+      border: 1px solid rgba(52,62,56,.04);
       z-index: 2;
       animation: fadeUp .8s .5s ease both;
     }
@@ -273,27 +273,14 @@
       background: var(--sage-dk);
       border-radius: 16px;
       padding: 14px 18px;
-      box-shadow: 0 10px 30px rgba(79,115,96,.25);
+      box-shadow: 0 10px 30px rgba(83,117,98,.20);
       z-index: 2;
       animation: fadeUp .8s .6s ease both;
     }
 
-    .float-card-2 .fc-icon {
-      font-size: 18px;
-      margin-bottom: 4px;
-    }
-
-    .float-card-2 .fc-text {
-      font-size: 11px;
-      color: rgba(255,255,255,.85);
-      line-height: 1.3;
-    }
-
-    .float-card-2 .fc-text strong {
-      color: #fff;
-      font-weight: 500;
-      display: block;
-    }
+    .float-card-2 .fc-icon { font-size: 18px; margin-bottom: 4px; }
+    .float-card-2 .fc-text { font-size: 11px; color: rgba(251,249,246,.85); line-height: 1.3; }
+    .float-card-2 .fc-text strong { color: var(--white); font-weight: 500; display: block; }
 
     /* ── DIVIDER ──────────────────────────────────────────── */
     .divider-section {
@@ -311,7 +298,7 @@
       font-size: clamp(20px, 2.5vw, 32px);
       font-weight: 300;
       font-style: italic;
-      color: rgba(255,255,255,.90);
+      color: var(--white);
       max-width: 600px;
       line-height: 1.4;
     }
@@ -324,7 +311,7 @@
       align-items: center;
       gap: 10px;
       background: var(--gold);
-      color: var(--ink);
+      color: #FFF;
       text-decoration: none;
       padding: 14px 28px;
       border-radius: 100px;
@@ -336,10 +323,8 @@
 
     .divider-cta:hover { opacity: .88; transform: translateY(-1px); }
 
-    /* ── SECCIONES DEL CUERPO (Con márgenes optimizados) ──── */
-    .section {
-      padding: 80px 80px;
-    }
+    /* ── SECCIONES DEL CUERPO ──── */
+    .section { padding: 80px 80px; }
 
     .section-label {
       display: inline-flex;
@@ -368,10 +353,7 @@
       max-width: 540px;
     }
 
-    .section-title em {
-      font-style: italic;
-      color: var(--sage-dk);
-    }
+    .section-title em { font-style: italic; color: var(--sage-dk); }
 
     .about-grid {
       display: grid;
@@ -389,22 +371,16 @@
     }
 
     .about-text p + p { margin-top: 16px; }
+    .about-text strong { color: var(--ink); font-weight: 500; }
 
-    .about-text strong {
-      color: var(--ink);
-      font-weight: 500;
-    }
-
-    .about-visual {
-      position: relative;
-    }
+    .about-visual { position: relative; }
 
     .about-img-box {
       width: 100%;
       aspect-ratio: 4/5;
       border-radius: 20px;
-      background: linear-gradient(135deg, var(--warm) 0%, rgba(122,158,135,.15) 100%);
-      border: 1px solid rgba(122,158,135,.20);
+      background: linear-gradient(135deg, var(--warm) 0%, rgba(141,168,151,.15) 100%);
+      border: 1px solid rgba(141,168,151,.20);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -414,7 +390,7 @@
     .about-img-box img {
       width: 100%; height: 100%;
       object-fit: cover;
-      display: none; 
+      display: none; /* Borra esto al poner su foto */
     }
 
     .about-stats {
@@ -424,7 +400,8 @@
       background: var(--white);
       border-radius: 16px;
       padding: 20px 24px;
-      box-shadow: 0 16px 56px rgba(0,0,0,.10);
+      box-shadow: 0 16px 56px rgba(52,62,56,.08);
+      border: 1px solid rgba(52,62,56,.04);
       display: flex;
       gap: 24px;
     }
@@ -462,8 +439,8 @@
     }
 
     .services-intro {
-      font-size: 14px;
-      line-height: 1.70;
+      font-size: 14.5px;
+      line-height: 1.75;
       color: var(--ink-soft);
       font-weight: 300;
     }
@@ -478,7 +455,7 @@
       background: var(--white);
       border-radius: 16px;
       padding: 30px 24px;
-      border: 1px solid rgba(43,43,43,.06);
+      border: 1px solid rgba(52,62,56,.04);
       transition: transform .3s, box-shadow .3s;
       position: relative;
       overflow: hidden;
@@ -497,7 +474,7 @@
 
     .service-card:hover {
       transform: translateY(-4px);
-      box-shadow: 0 20px 50px rgba(0,0,0,.08);
+      box-shadow: 0 20px 40px rgba(52,62,56,.06);
     }
 
     .service-card:hover::after { transform: scaleX(1); }
@@ -505,7 +482,7 @@
     .service-icon {
       width: 48px; height: 48px;
       border-radius: 12px;
-      background: rgba(122,158,135,.12);
+      background: rgba(141,168,151,.15);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -538,11 +515,7 @@
       align-items: center;
     }
 
-    .modality-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
+    .modality-cards { display: flex; flex-direction: column; gap: 16px; }
 
     .mod-card {
       background: var(--white);
@@ -551,18 +524,16 @@
       display: flex;
       gap: 16px;
       align-items: flex-start;
-      border: 1px solid rgba(43,43,43,.06);
+      border: 1px solid rgba(52,62,56,.04);
       transition: box-shadow .25s;
     }
 
-    .mod-card:hover {
-      box-shadow: 0 10px 30px rgba(0,0,0,.06);
-    }
+    .mod-card:hover { box-shadow: 0 10px 30px rgba(52,62,56,.04); }
 
     .mod-card-icon {
       width: 42px; height: 42px;
       border-radius: 10px;
-      background: rgba(79,115,96,.10);
+      background: rgba(83,117,98,.12);
       display: flex; align-items: center; justify-content: center;
       font-size: 18px;
       flex-shrink: 0;
@@ -588,7 +559,7 @@
     /* ── CTA SECTION ──────────────────────────────────────── */
     .cta-section {
       margin: 0 80px 80px;
-      background: linear-gradient(135deg, var(--sage-dk) 0%, #3a5c49 100%);
+      background: linear-gradient(135deg, var(--sage-dk) 0%, #3a5344 100%);
       border-radius: 28px;
       padding: 60px 80px;
       display: grid;
@@ -604,7 +575,7 @@
       position: absolute;
       width: 300px; height: 300px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.08);
+      border: 1px solid rgba(251,249,246,.08);
       top: -150px; right: -80px;
     }
 
@@ -613,7 +584,7 @@
       position: absolute;
       width: 200px; height: 200px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.06);
+      border: 1px solid rgba(251,249,246,.06);
       bottom: -80px; right: 80px;
     }
 
@@ -622,7 +593,7 @@
       font-weight: 500;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.55);
+      color: rgba(251,249,246,.65);
       margin-bottom: 12px;
     }
 
@@ -630,20 +601,17 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(28px, 3.5vw, 44px);
       font-weight: 300;
-      color: #fff;
+      color: var(--white);
       line-height: 1.1;
       max-width: 450px;
     }
 
-    .cta-title em {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .cta-title em { font-style: italic; color: var(--gold); }
 
     .cta-subtitle {
       font-size: 14.5px;
       line-height: 1.65;
-      color: rgba(255,255,255,.65);
+      color: rgba(251,249,246,.75);
       font-weight: 300;
       margin-top: 16px;
       max-width: 400px;
@@ -673,8 +641,6 @@
       box-shadow: 0 14px 40px rgba(37,211,102,.40);
     }
 
-    .cta-btn svg { flex-shrink: 0; }
-
     /* ── FOOTER ───────────────────────────────────────────── */
     footer {
       background: var(--ink);
@@ -689,31 +655,25 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 20px;
       font-weight: 300;
-      color: rgba(255,255,255,.85);
+      color: rgba(251,249,246,.85);
     }
 
-    .footer-brand span {
-      font-style: italic;
-      color: var(--gold);
-    }
+    .footer-brand span { font-style: italic; color: var(--gold); }
 
     .footer-copy {
       font-size: 11.5px;
-      color: rgba(255,255,255,.35);
+      color: rgba(251,249,246,.45);
       margin-top: 6px;
     }
 
-    .footer-socials {
-      display: flex;
-      gap: 12px;
-    }
+    .footer-socials { display: flex; gap: 12px; }
 
     .social-link {
       width: 40px; height: 40px;
       border-radius: 50%;
-      border: 1px solid rgba(255,255,255,.15);
+      border: 1px solid rgba(251,249,246,.15);
       display: flex; align-items: center; justify-content: center;
-      color: rgba(255,255,255,.55);
+      color: rgba(251,249,246,.65);
       text-decoration: none;
       font-size: 16px;
       transition: border-color .2s, color .2s, background .2s;
@@ -722,7 +682,7 @@
     .social-link:hover {
       border-color: var(--gold);
       color: var(--gold);
-      background: rgba(201,169,110,.08);
+      background: rgba(181,155,101,.08);
     }
 
     /* ── ANIMATIONS ───────────────────────────────────────── */
@@ -733,10 +693,7 @@
 
     /* ── RESPONSIVE ───────────────────────────────────────── */
     @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: 1fr;
-        padding: 40px 0;
-      }
+      .hero { grid-template-columns: 1fr; padding: 40px 0; }
       .hero-left { padding: 40px 32px 30px; }
       .hero-right { padding: 30px 0 40px; }
       .section { padding: 60px 32px; }
@@ -758,18 +715,18 @@
     <span class="badge">Psicóloga Colegiada C.Ps.P. [Número]</span>
 
     <h1 class="hero-name">
-      Lic. [Nombre<br>de tu <em>Tía</em>]
+      Psicóloga<br>Mary <em>Quiroz</em>
     </h1>
-    <p class="hero-tagline">Un espacio seguro para sanar y crecer.</p>
+    <p class="hero-tagline">Un refugio seguro para descubrir tu propio camino.</p>
 
     <p class="hero-desc">
-      Acompaño a personas adultas y jóvenes en su proceso de bienestar emocional,
-      con un enfoque cálido, empático y libre de juicios. Sesiones 100% virtuales 
-      desde cualquier lugar.
+      Mi propósito no es decirte qué hacer, sino acompañarte sin juicios. 
+      Te brindo un espacio cálido y confidencial para que ordenes tus pensamientos y 
+      encuentres, a tu propio ritmo, las respuestas que ya habitan en ti.
     </p>
 
     <div class="hero-ctas">
-      <a href="https://wa.me/51XXXXXXXXX" class="btn-primary" target="_blank">
+      <a href="https://wa.me/51939380981" class="btn-primary" target="_blank">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Agendar Cita
       </a>
@@ -783,31 +740,24 @@
   <div class="hero-right">
     <div class="photo-frame">
       <div class="photo-placeholder">
-        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#7A9E87" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <span>Foto de tu tía aquí</span>
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#8DA897" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Foto de Mary aquí</span>
       </div>
     </div>
 
     <div class="float-card">
       <div class="float-card-label">Experiencia</div>
-      <div class="float-card-value">[X] <span>años</span></div>
+      <div class="float-card-value">5 <span>años</span></div>
     </div>
 
-    <div class="float-card-2">
-      <div class="fc-icon">🌿</div>
-      <div class="fc-text">
-        <strong>100% Online</strong>
-        Atención Nacional
-      </div>
-    </div>
-  </div>
+
 </section>
 
 <div class="divider-section">
   <p class="divider-quote">
-    Dar el primer paso hacia el bienestar es el acto más valiente que puedes tomar.
+    No necesitas que te obliguen a cambiar; necesitas que te acompañen a sanar.
   </p>
-  <a href="https://wa.me/51XXXXXXXXX" class="divider-cta" target="_blank">
+  <a href="https://wa.me/51939380981" class="divider-cta" target="_blank">
     Comenzar ahora →
   </a>
 </div>
@@ -816,36 +766,31 @@
   <div class="about-grid">
     <div>
       <span class="section-label">Sobre mí</span>
-      <h2 class="section-title">Un enfoque <em>humano</em> y sin juicios</h2>
+      <h2 class="section-title">Acompañamiento empático y <em>sin juicios</em></h2>
       <div class="about-text">
         <p>
-          Hola, soy la Psicóloga <strong>[Nombre de tu Tía]</strong>. Llegué desde la hermosa ciudad de
-          Cajamarca con el firme propósito de guiar y acompañar a las personas en su proceso
-          de sanación y crecimiento personal.
+          Hola, soy <strong>Mary Quiroz</strong>, Psicóloga Colegiada. Mi enfoque de terapia rompe con el esquema tradicional de dar órdenes o "recetas mágicas". 
         </p>
         <p>
-          Ofrezco un espacio <strong>cálido, empático y confidencial</strong>. Creo profundamente 
-          en que cada persona tiene en sí misma los recursos para transformar su vida 
-          — mi rol es acompañarte a descubrirlos.
+          Creo firmemente que <strong>tú no necesitas que te digan qué hacer</strong> ni cómo vivir. Lo que ofrezco es un entorno de escucha activa y empatía profunda donde puedas explorar tus emociones sin sentirte juzgado.
         </p>
         <p>
-          Atiendo de manera <strong>completamente virtual a nivel nacional e internacional</strong>,
-          permitiéndote llevar tu terapia desde el espacio donde te sientas más cómodo y seguro.
+          Yo pongo las herramientas profesionales y el refugio seguro; tú pones tu historia. Trabajaremos a tu propio ritmo, de manera <strong>100% virtual</strong>, para que construyas las respuestas que ya existen dentro de ti.
         </p>
       </div>
     </div>
     <div class="about-visual">
       <div class="about-img-box">
-        <img src="" alt="Foto de la psicóloga"/>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#7A9E87" stroke-width="1" opacity=".3"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <img src="" alt="Psicóloga Mary Quiroz"/>
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#8DA897" stroke-width="1" opacity=".3"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       </div>
       <div class="about-stats">
         <div class="stat">
-          <div class="stat-num">[X]+</div>
+          <div class="stat-num">200+</div>
           <div class="stat-label">Pacientes</div>
         </div>
         <div class="stat">
-          <div class="stat-num">[X]</div>
+          <div class="stat-num">5</div>
           <div class="stat-label">Años exp.</div>
         </div>
         <div class="stat">
@@ -864,41 +809,41 @@
       <h2 class="section-title">¿Cómo te puedo <em>ayudar</em>?</h2>
     </div>
     <p class="services-intro">
-      Cada proceso terapéutico es único. Trabajo con distintas problemáticas
-      y te acompaño con técnicas basadas en evidencia, adaptadas a tu historia personal.
+      Cada proceso es distinto porque cada historia importa. Te acompaño a desenredar 
+      aquello que te causa peso, siempre respetando tus tiempos y tus decisiones.
     </p>
   </div>
 
   <div class="services-grid">
     <div class="service-card">
       <div class="service-icon">🧠</div>
-      <h3 class="service-title">Terapia Individual para Adultos y Jóvenes</h3>
-      <p class="service-desc">Un espacio personal para explorar tus emociones y patrones de comportamiento con acompañamiento profesional.</p>
+      <h3 class="service-title">Terapia Individual</h3>
+      <p class="service-desc">Un espacio seguro y libre de presión para explorar tus emociones y pensamientos con total libertad.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">🌊</div>
-      <h3 class="service-title">Ansiedad y Estrés Cotidiano</h3>
-      <p class="service-desc">Aprende a manejar la tensión del día a día con herramientas prácticas que puedes integrar en tu rutina real.</p>
+      <h3 class="service-title">Ansiedad y Estrés</h3>
+      <p class="service-desc">Aprendamos a entender la tensión del día a día sin forzarla, encontrando la calma que tu mente necesita.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">🕊️</div>
       <h3 class="service-title">Duelos y Rupturas</h3>
-      <p class="service-desc">Acompañamiento empático para transitar pérdidas emocionales y encontrar un camino hacia la paz interior.</p>
+      <p class="service-desc">Un hombro profesional y empático para transitar tus pérdidas, validando todo lo que sientes en el proceso.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">✨</div>
-      <h3 class="service-title">Autoestima y Crecimiento</h3>
-      <p class="service-desc">Trabaja en tu relación contigo mismo/a, fortalece tu autoconfianza y desarrolla todo tu potencial.</p>
+      <h3 class="service-title">Crecimiento Personal</h3>
+      <p class="service-desc">Reconecta contigo mismo/a. Trabajemos tu autoconfianza desde la aceptación, no desde la exigencia.</p>
     </div>
     <div class="service-card">
       <div class="service-icon">💑</div>
-      <h3 class="service-title">Consejería de Pareja</h3>
-      <p class="service-desc">Mejora la comunicación, resuelve conflictos y construye vínculos más sanos y conscientes con quien amas.</p>
+      <h3 class="service-title">Conflictos de Relación</h3>
+      <p class="service-desc">Entendamos cómo te vinculas con los demás para construir relaciones más sanas y conscientes.</p>
     </div>
-    <div class="service-card" style="background: rgba(122,158,135,.08); border-color: rgba(122,158,135,.20);">
-      <div class="service-icon" style="background: rgba(201,169,110,.15);">💬</div>
-      <h3 class="service-title" style="color: var(--sage-dk);">¿No encuentras lo que buscas?</h3>
-      <p class="service-desc">Escríbeme directamente. Evaluamos juntos tu situación y encontramos el enfoque ideal para ti.</p>
+    <div class="service-card" style="background: rgba(141,168,151,.08); border-color: rgba(141,168,151,.15);">
+      <div class="service-icon" style="background: rgba(181,155,101,.15);">💬</div>
+      <h3 class="service-title" style="color: var(--sage-dk);">¿Hablamos?</h3>
+      <p class="service-desc">Si no estás seguro de por dónde empezar, escríbeme. Daremos el primer paso juntos, sin compromisos.</p>
     </div>
   </div>
 </section>
@@ -906,10 +851,10 @@
 <section class="modality-section">
   <div>
     <span class="section-label">Modalidad y Citas</span>
-    <h2 class="section-title">Simple, <em>flexible</em> y pensado para ti</h2>
+    <h2 class="section-title">Simple, <em>flexible</em> y a tu propio ritmo</h2>
     <p style="font-size:14.5px;line-height:1.75;color:var(--ink-soft);font-weight:300;margin-top:20px;max-width:380px;">
-      No necesitas pasar por procesos complicados. Coordinamos directamente
-      el día y la hora que mejor se acomode a tu horario, sin burocracia.
+      El proceso debe ser un alivio, no una carga más en tu agenda. 
+      Coordinamos un horario que de verdad se acomode a tu vida.
     </p>
   </div>
 
@@ -917,15 +862,15 @@
     <div class="mod-card">
       <div class="mod-card-icon">💻</div>
       <div class="mod-card-body">
-        <div class="mod-card-title">Sesión Virtual Personalizada</div>
-        <div class="mod-card-desc">Por videollamada en una plataforma segura. Misma calidad humana, misma confidencialidad que un consultorio.</div>
+        <div class="mod-card-title">Sesión 100% Virtual</div>
+        <div class="mod-card-desc">Por videollamada. Máxima privacidad y la comodidad de conectar desde tu espacio seguro.</div>
       </div>
     </div>
     <div class="mod-card">
       <div class="mod-card-icon">📅</div>
       <div class="mod-card-body">
-        <div class="mod-card-title">Agenda fácil por WhatsApp</div>
-        <div class="mod-card-desc">Sin formularios ni esperas. Un mensaje directo y coordinamos tu primera sesión de forma inmediata.</div>
+        <div class="mod-card-title">Directo por WhatsApp</div>
+        <div class="mod-card-desc">Sin formularios burocráticos. Mándame un mensaje cuando te sientas listo/a y nos organizamos.</div>
       </div>
     </div>
   </div>
@@ -934,32 +879,43 @@
 <div class="cta-section">
   <div>
     <div class="cta-label">Da el primer paso</div>
-    <h2 class="cta-title">Tu bienestar <em>empieza</em> con una conversación.</h2>
+    <h2 class="cta-title">Tu bienestar <em>empieza</em> siendo escuchado de verdad.</h2>
     <p class="cta-subtitle">
-      Sin compromisos, sin juicios. La primera consulta es para conocernos y
-      ver cómo puedo acompañarte en tu proceso.
+      La primera consulta es para conocernos, sin presiones. Tú decides si te sientes 
+      con la confianza para continuar el proceso.
     </p>
   </div>
-  <a href="https://wa.me/51XXXXXXXXX" class="cta-btn" target="_blank">
+ <a href="https://wa.me/51939380981?text=Hola%20Psic%C3%B3loga%20Mary,%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20consulta." class="cta-btn" target="_blank">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-    Agendar por WhatsApp
+    Escribir por WhatsApp
   </a>
 </div>
 
 <footer>
   <div>
-    <div class="footer-brand">Lic. [Nombre de tu Tía] — <span>Psicóloga</span></div>
-    <div class="footer-copy">© 2026 Consultoría Psicológica · C.Ps.P. [Número] · Lima, Perú · Todos los derechos reservados.</div>
-  </div>
-  <div class="footer-socials">
-    <a href="#" class="social-link" target="_blank" title="Facebook">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-    </a>
-    <a href="#" class="social-link" target="_blank" title="Instagram">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-    </a>
+    <div class="footer-brand">Psicóloga Mary Quiroz — <span>C.Ps.P. [Número]</span></div>
+    <div class="footer-copy">© 2026 Consultoría Psicológica · Lima, Perú · Todos los derechos reservados.</div>
   </div>
 </footer>
-
+<a href="https://wa.me/51939380981?text=Hola%20Psic%C3%B3loga%20Mary,%20vengo%20de%20su%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20agendar%20una%20consulta." target="_blank" style="
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+">
+    <svg width="35" height="35" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.93 0c3.165.001 6.14 1.233 8.377 3.469 2.237 2.235 3.467 5.207 3.466 8.373-.003 6.582-5.338 11.93-11.873 11.93-2.01 0-3.987-.511-5.741-1.486L0 24zm6.335-3.61c1.644.976 3.51 1.49 5.522 1.491 5.432 0 9.851-4.347 9.853-9.693.001-2.589-1.006-5.023-2.835-6.855C17.096 3.502 14.67 2.498 12.1 2.498c-5.435 0-9.853 4.346-9.856 9.693a9.493 9.493 0 0 0 1.448 5.053l-.999 3.648 3.702-.953zM16.92 14.91c-.286-.142-1.69-.817-1.952-.91-.262-.094-.452-.142-.642.142-.19.284-.736.91-.903 1.099-.166.19-.332.213-.618.071-.286-.142-1.207-.435-2.3-1.39-0.851-.74-1.425-1.654-1.591-1.938-.166-.285-.018-.439.124-.581.128-.128.286-.324.429-.486.143-.162.19-.277.286-.462.095-.185.048-.347-.024-.486-.071-.142-.642-1.503-.879-2.057-.232-.546-.467-.472-.642-.48l-.547-.008c-.19 0-.499.07-.76.353-.261.283-.998.951-.998 2.32 0 1.369.996 2.691 1.139 2.879.143.188 1.96 2.923 4.747 4.095.663.279 1.18.445 1.584.57.666.207 1.272.178 1.75.109.533-.077 1.69-.675 1.928-1.328.238-.654.238-1.213.166-1.33-.071-.116-.262-.185-.548-.327z"/>
+    </svg>
+</a>
 </body>
 </html>
