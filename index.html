@@ -567,6 +567,63 @@
 body {
   overflow-x: hidden;
 }
+.hero-visual{
+  position: relative;
+}
+
+.experience-card{
+  position: absolute;
+
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: var(--bg-card);
+  border-radius: 18px;
+
+  padding: 14px 22px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.10);
+  border: 1px solid rgba(255,255,255,.7);
+
+  z-index: 10;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+.exp-number{
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.exp-number span{
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.exp-text{
+  font-size: 11px;
+  letter-spacing: .08em;
+  margin-top: 4px;
+}
+
+@media (max-width:600px){
+
+  .experience-card{
+    bottom: -8px;
+    padding: 10px 16px;
+  }
+
+  .exp-number{
+    font-size: 22px;
+  }
+
+  .exp-text{
+    font-size: 10px;
+  }
+}
   </style>
 </head>
 <body>
@@ -590,12 +647,18 @@ body {
   </div>
   
   <div class="hero-visual">
-    <img src="https://raw.githubusercontent.com/Shisho1012/web-psicologia/main/imagen1.jpeg" alt="Psicóloga Mary Quiroz" class="blob-img" />
-    <div class="experience-card">
-      <div class="exp-number">2</div>
-      <div class="exp-text">AÑOS DE TRAYECTORIA </div>
+  <img src="https://raw.githubusercontent.com/Shisho1012/web-psicologia/main/imagen1.jpeg" alt="Psicóloga Mary Quiroz" class="blob-img" />
+
+  <div class="experience-card">
+    <div class="exp-number">
+      2 <span>AÑOS</span>
+    </div>
+
+    <div class="exp-text">
+      DE TRAYECTORIA
     </div>
   </div>
+</div>
 </section>
 
 <div class="quote-section">
