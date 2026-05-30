@@ -1,6 +1,6 @@
 # 🌐 Página Web - Psicóloga Mary Quiroz
 
-Este es el repositorio oficial de la página web para la psicóloga Mary Solansh Quiroz Gutierrez. Es un sitio web estático, responsivo y completamente funcional, diseñado para presentar sus servicios de terapia online de forma profesional y facilitar el contacto directo con sus pacientes.
+Este es el repositorio oficial de la página web para la psicóloga Mary Quiroz. Es un sitio web estático, responsivo y completamente funcional, diseñado para presentar sus servicios de terapia online de forma profesional y facilitar el contacto directo con sus pacientes.
 
 ---
 
