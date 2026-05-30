@@ -1,28 +1,38 @@
 # 🌐 Página Web - Psicóloga Mary Quiroz
 
-Este es el repositorio oficial de la página web para la psicóloga Mary Quiroz. Es un sitio web estático, responsivo y completamente funcional, diseñado para presentar sus servicios de terapia online de forma profesional y facilitar el contacto directo con sus pacientes.
+Este es el repositorio oficial de la página web para la psicóloga Mary Quiroz. Es un sitio web estático, responsivo y completamente funcional, configurado con un dominio personalizado para su uso profesional en terapias online.
 
 ---
 
-## 🔗 Ver la Página en Vivo
-Puedes entrar a revisar la página web funcionando en internet a través del siguiente enlace:
-👉 https://hablandoconmary.online/
+## 🔗 Enlace Oficial de la Página
+La web se encuentra completamente activa y en producción a través de su dominio propio:
+👉 **[https://hablandoconmary.online]**
 
 ---
 
 ## 📄 ¿Qué incluye este proyecto?
 
-El repositorio está estructurado de la forma más limpia y ligera posible, conteniendo únicamente los archivos necesarios para su funcionamiento:
+El repositorio contiene únicamente los archivos esenciales para garantizar ligereza y velocidad de carga:
 
-* **`index.html`**: Contiene toda la estructura de la página (textos, secciones, enlaces) y los estilos de diseño (colores café/crema, tipografías de Google y animaciones).
-* **`imagen1.jpeg`**: La fotografía principal de la psicóloga que se muestra en la portada de la web.
-* **`imagen2.png`**: Otra fotografía complementaria que se utiliza dentro de la página.
+* **`index.html`**: Estructura principal de la página, textos, accesos y los estilos de diseño (colores café/crema, tipografías y animaciones).
+* **`imagen1.jpeg`**: Fotografía principal de la psicóloga en la sección de portada.
+* **`imagen2.png`**: Ilustración o elemento visual complementario de la página.
+* **`CNAME`**: Archivo de configuración que le indica a GitHub Pages qué dominio personalizado debe usar.
 
 ---
 
-## 💡 Características de la Página
+## 🛠️ Configuración e Infraestructura
 
-* **Diseño Adaptable (Responsive):** La página se acomoda automáticamente si la abres desde un celular, una tablet o una computadora para que siempre se lea bien.
-* **Paleta de Colores Relajante:** Utiliza tonos cafés suaves, arenas y cremas para transmitir calma, seriedad y profesionalismo.
-* **Botón Directo a WhatsApp:** Incluye accesos directos y un botón flotante que abre el chat de WhatsApp con un mensaje predeterminado para que los pacientes agenden su consulta en un clic.
-* **Carga Rápida:** Al estar construida únicamente con HTML y CSS puro (sin programas pesados de terceros), la página carga de manera casi instantánea.
+Para poner la página en marcha, se integraron los siguientes servicios:
+
+1. **Alojamiento (Hosting):** Se utiliza **GitHub Pages** para servir los archivos HTML y CSS de forma gratuita, segura y con carga rápida.
+2. **Dominio Personalizado (Porkbun):** Se adquirió el dominio en el proveedor **Porkbun** y se configuraron los registros DNS correspondientes (apuntando a las direcciones IP de GitHub) para enmascarar la dirección por defecto de GitHub y darle una identidad formal a la web.
+3. **Seguridad SSL:** La página cuenta con el certificado de seguridad activado (el candadito HTTPS) gracias al cifrado automático que provee GitHub Pages para dominios personalizados.
+
+---
+
+## 💡 Características Generales
+
+* **Diseño Adaptable (Responsive):** Optimizada para verse y leerse correctamente desde smartphones, tablets y computadoras.
+* **Estilo Visual Profesional:** Paleta basada en tonos cafés suaves, arenas y cremas para transmitir un ambiente de calma y confianza.
+* **Contacto en un Clic:** Botones estratégicos y un botón flotante que abren directamente el chat de WhatsApp con un mensaje personalizado para agendar consultas de forma rápida.
