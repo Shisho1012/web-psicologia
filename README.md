@@ -6,7 +6,7 @@ Este es el repositorio oficial de la página web para la psicóloga Mary Quiroz.
 
 ## 🔗 Enlace Oficial de la Página
 La web se encuentra completamente activa y en producción a través de su dominio propio:
-👉 **[https://hablandoconmary.online]**
+👉 **[https://psicologamaryquiroz.help]**
 
 ---
 
